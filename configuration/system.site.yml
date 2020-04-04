@@ -1,0 +1,14 @@
+uuid: 39d88a7e-bbbd-4c85-8ebf-a837dd817274
+name: 'Online Személyi Tréningek'
+mail: roland.molnar@gmail.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: hu
+default_langcode: hu
+_core:
+  default_config_hash: yTxtFqBHnEWxQswuWvkjE8mKw2t8oKuCL1q8KnfHuGE

@@ -1,0 +1,22 @@
+uuid: 53db7205-1911-42f5-a852-9239e266fc5c
+langcode: hu
+status: true
+dependencies:
+  config:
+    - node.type.training
+id: node.training.promote
+field_name: promote
+entity_type: node
+bundle: training
+label: 'Címlapra helyezve'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Be
+  off_label: Ki
+field_type: boolean

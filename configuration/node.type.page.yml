@@ -1,0 +1,13 @@
+uuid: 12211731-e3c5-470e-8f2b-dcabedcdcd3e
+langcode: hu
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: KuyA4NHPXcmKAjRtwa0vQc2ZcyrUJy6IlS2TAyMNRbc
+name: 'Egyszerű oldal'
+type: page
+description: 'Az <em>egyszerű oldal</em> használatos az állandó tartalmakhoz, ilyen például a „Bemutatkozás” oldal.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

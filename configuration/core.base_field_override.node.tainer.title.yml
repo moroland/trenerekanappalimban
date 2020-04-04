@@ -1,0 +1,18 @@
+uuid: 9cea8538-9fc0-43e8-aa55-eaacfda5f91a
+langcode: hu
+status: true
+dependencies:
+  config:
+    - node.type.tainer
+id: node.tainer.title
+field_name: title
+entity_type: node
+bundle: tainer
+label: Név
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

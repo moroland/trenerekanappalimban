@@ -1,0 +1,32 @@
+uuid: eaf90c36-7b56-4a7b-8622-0a55c8ed2c08
+langcode: hu
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rating
+    - node.type.tainer
+  module:
+    - fivestar
+id: node.tainer.field_rating
+field_name: field_rating
+entity_type: node
+bundle: tainer
+label: Értékelés
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    rating: '80'
+    target: null
+default_value_callback: ''
+settings:
+  stars: '5'
+  allow_clear: 1
+  allow_revote: 1
+  allow_ownvote: 1
+  rated_while: viewing
+  enable_voting_target: 0
+  target_bridge_field: ''
+  target_fivestar_field: ''
+field_type: fivestar

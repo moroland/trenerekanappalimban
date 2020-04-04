@@ -1,0 +1,25 @@
+uuid: 36782b7f-e433-4089-a659-9667d5bd67d4
+langcode: hu
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_video
+    - node.type.training
+  module:
+    - video_embed_field
+id: node.training.field_video
+field_name: field_video
+entity_type: node
+bundle: training
+label: Video
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_providers:
+    vimeo: vimeo
+    youtube: youtube
+    youtube_playlist: '0'
+field_type: video_embed_field

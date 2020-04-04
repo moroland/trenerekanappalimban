@@ -1,0 +1,12 @@
+uuid: e80badd8-397e-43e8-b124-5db6b49ae8c1
+langcode: hu
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 4iy5jeoTP0Y4BqSaV1C6cz4GKLFea1tWzk3ez1_CMVU
+id: private_files
+label: 'Privát fájlok könyvtára'
+type: Directory
+config:
+  name: 'Private Files Directory'
+  directory: 'private://backup_migrate/'

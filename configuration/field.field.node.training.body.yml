@@ -1,0 +1,23 @@
+uuid: 08fc93dc-3df1-4719-870e-a6a0fea4cb91
+langcode: hu
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.training
+  module:
+    - text
+id: node.training.body
+field_name: body
+entity_type: node
+bundle: training
+label: Leírás
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

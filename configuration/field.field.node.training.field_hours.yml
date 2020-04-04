@@ -1,0 +1,21 @@
+uuid: 54dac39e-ef8e-4ffb-90e3-20a3cb807678
+langcode: hu
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hours
+    - node.type.training
+  module:
+    - office_hours
+id: node.training.field_hours
+field_name: field_hours
+entity_type: node
+bundle: training
+label: Időpontok
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: office_hours

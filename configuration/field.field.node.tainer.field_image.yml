@@ -1,0 +1,38 @@
+uuid: 8c8c166c-3360-449c-bdd8-635b17a0d65c
+langcode: hu
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image
+    - node.type.tainer
+  module:
+    - image
+id: node.tainer.field_image
+field_name: field_image
+entity_type: node
+bundle: tainer
+label: Kép
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: b54d3757-0913-432f-8a0a-73d9f280bd48
+    alt: ''
+    title: ''
+    width: 337
+    height: 287
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

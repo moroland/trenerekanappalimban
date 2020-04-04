@@ -1,0 +1,10 @@
+uuid: e033fbb1-d2a5-4dcc-aab7-4ea3cb7c939d
+langcode: hu
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: bqZsN31T2n0UjcbyCpOPi9D2iO0sAOHR7FnEs9qMvaA
+id: comment
+label: 'Alapértelmezett hozzászólások'
+target_entity_type_id: node
+description: 'Lehetővé teszi a hozzászólást a tartalmakhoz'

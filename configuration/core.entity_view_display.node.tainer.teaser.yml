@@ -1,0 +1,55 @@
+uuid: e474e220-e3e9-4ea3-bdda-5d54b46cca07
+langcode: hu
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.tainer.body
+    - field.field.node.tainer.field_image
+    - field.field.node.tainer.field_rating
+    - image.style.thumbnail
+    - node.type.tainer
+  module:
+    - fivestar
+    - image
+    - text
+    - user
+id: node.tainer.teaser
+targetEntityType: node
+bundle: tainer
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 2
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  field_image:
+    type: image
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      image_style: thumbnail
+      image_link: ''
+    third_party_settings: {  }
+  field_rating:
+    type: fivestar_stars
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      text_format: average
+      display_format: average
+      fivestar_widget: modules/fivestar/widgets/basic/basic.css
+    third_party_settings: {  }
+  links:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

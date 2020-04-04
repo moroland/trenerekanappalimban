@@ -1,0 +1,15 @@
+uuid: 91d06a15-dae5-484e-b1cf-e1782c129e8e
+langcode: hu
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: j-rE9LRcHAh5WPmOIg9glR7GKLw1CkvVnJvKNe376vM
+id: daily_schedule
+label: 'Napi program'
+enabled: null
+keep: null
+period: null
+cron: null
+source_id: null
+destination_id: null
+settings_profile_id: null

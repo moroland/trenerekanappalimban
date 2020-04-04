@@ -1,0 +1,23 @@
+uuid: 1b8f57c7-190d-4672-9771-1e2b763fc870
+langcode: hu
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.tainer
+  module:
+    - text
+id: node.tainer.body
+field_name: body
+entity_type: node
+bundle: tainer
+label: Rólam
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

@@ -1,0 +1,10 @@
+uuid: 66ea5d17-dbf1-4483-a576-216edc93b5f2
+langcode: hu
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 7yrlW5z9zdg2eBucB2GPqXKSMQfH9lSRSO4DbWF7AFc
+id: footer
+label: Lábléc
+description: 'Információk a webhelyről'
+locked: true

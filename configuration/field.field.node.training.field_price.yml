@@ -1,0 +1,23 @@
+uuid: 12bdb3ca-4352-4b1d-a346-847051ff2f5e
+langcode: hu
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_price
+    - node.type.training
+id: node.training.field_price
+field_name: field_price
+entity_type: node
+bundle: training
+label: Ár
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: Ft
+field_type: integer

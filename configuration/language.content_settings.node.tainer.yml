@@ -1,0 +1,11 @@
+uuid: e9ce1925-0a93-4dbb-95be-a21b2369949e
+langcode: hu
+status: true
+dependencies:
+  config:
+    - node.type.tainer
+id: node.tainer
+target_entity_type_id: node
+target_bundle: tainer
+default_langcode: site_default
+language_alterable: false

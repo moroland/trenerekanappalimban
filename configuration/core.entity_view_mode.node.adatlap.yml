@@ -1,0 +1,10 @@
+uuid: d758719e-9f15-46a6-9ee5-bdde02925741
+langcode: hu
+status: true
+dependencies:
+  module:
+    - node
+id: node.adatlap
+label: Adatlap
+targetEntityType: node
+cache: true

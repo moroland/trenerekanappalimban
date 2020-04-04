@@ -1,0 +1,11 @@
+uuid: 8ac96b1c-1edf-4ac9-8f92-988f6f845721
+langcode: hu
+status: true
+dependencies: {  }
+id: override_all_the_things
+label: 'Override ALL THE THINGS'
+code: "body {\r\n  \r\n}"
+media: all
+preprocess: true
+conditions: {  }
+conditions_require_all: true

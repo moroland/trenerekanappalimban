@@ -1,0 +1,22 @@
+uuid: 11b156e2-3f38-40cf-b44d-fd73c34c3ad8
+langcode: hu
+status: true
+dependencies:
+  config:
+    - node.type.tainer
+id: node.tainer.promote
+field_name: promote
+entity_type: node
+bundle: tainer
+label: 'Címlapra helyezve'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Be
+  off_label: Ki
+field_type: boolean

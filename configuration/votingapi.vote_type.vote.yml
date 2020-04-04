@@ -1,0 +1,10 @@
+uuid: 8c4c0ac8-5320-49b4-9ae1-beb6db76f59c
+langcode: hu
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: aXZ2sOR-jVF6_oScPSJTjXCo333arzczomYQMnsJ8wU
+id: vote
+label: 'Normál szavazat'
+value_type: points
+description: 'Az alapértelmezés szerinti címke a tartalommal kapcsolatos szavazatoknál. Ha többszörös szavazatokat különböző címkékkel adnak le a tartalom egy részén, akkor ezzel a címkével is ad egy azonnali szavazatot.'

@@ -1,0 +1,29 @@
+uuid: 47c0955f-c7e0-46f1-ad1c-a441cb8ea4cc
+langcode: hu
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_trainer
+    - node.type.tainer
+    - node.type.training
+id: node.training.field_trainer
+field_name: field_trainer
+entity_type: node
+bundle: training
+label: Tréner
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      tainer: tainer
+    sort:
+      field: title
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

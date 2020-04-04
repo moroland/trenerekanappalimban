@@ -1,0 +1,17 @@
+uuid: 7b47cb92-e1e6-47be-9383-3579293f28d4
+langcode: hu
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Tréning
+type: training
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

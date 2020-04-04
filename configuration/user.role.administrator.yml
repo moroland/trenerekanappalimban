@@ -1,0 +1,11 @@
+uuid: 23fe215e-5f28-482c-9e97-de9b18533761
+langcode: hu
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Om6FEO7vZZMkPIbVvfxtdkWerQ2PvQM4sWUd6Q3ZnfI
+id: administrator
+label: Adminisztrátor
+weight: 2
+is_admin: true
+permissions: {  }
