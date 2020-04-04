@@ -5,8 +5,10 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - node.type.training
+    - taxonomy.vocabulary.categories
   module:
     - node
+    - taxonomy
     - user
 id: trainings
 label: Tréningek
@@ -33,12 +35,12 @@ display:
         type: views_query
         options:
           disable_sql_rewrite: false
-          distinct: false
+          distinct: true
           replica: false
           query_comment: ''
           query_tags: {  }
       exposed_form:
-        type: basic
+        type: input_required
         options:
           submit_button: Alkalmaz
           reset_button: false
@@ -47,6 +49,8 @@ display:
           expose_sort_order: true
           sort_asc_label: Növekvő
           sort_desc_label: Csökkenő
+          text_input_required: 'Az eredmények megjelennek bármely szűrő kiválasztása után, az Alkalmaz gombra kattintva'
+          text_input_required_format: basic_html
       pager:
         type: mini
         options:
@@ -145,6 +149,412 @@ display:
           expose:
             operator_limit_selection: false
             operator_list: {  }
+          group: 1
+        term_node_tid_depth:
+          id: term_node_tid_depth
+          table: node_field_data
+          field: term_node_tid_depth
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: term_node_tid_depth_op
+            label: Kategória
+            description: ''
+            use_operator: false
+            operator: term_node_tid_depth_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: term_node_tid_depth
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: categories
+          hierarchy: true
+          error_message: true
+          depth: 10
+          entity_type: node
+          plugin_id: taxonomy_index_tid_depth
+        field_hours_day:
+          id: field_hours_day
+          table: node__field_hours
+          field: field_hours_day
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_hours_day_op
+            label: 'Időpontok (field_hours:day)'
+            description: null
+            use_operator: false
+            operator: field_hours_day_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_hours_day
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: null
+            min_placeholder: null
+            max_placeholder: null
+          is_grouped: true
+          group_info:
+            label: Nap
+            description: ''
+            identifier: field_hours_day
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1:
+                title: Hétköznap
+                operator: between
+                value:
+                  value: ''
+                  min: '1'
+                  max: '5'
+              2:
+                title: Hétvége
+                operator: between
+                value:
+                  value: ''
+                  min: '6'
+                  max: '7'
+              3:
+                title: Hétfő
+                operator: '='
+                value:
+                  value: '1'
+                  min: ''
+                  max: ''
+              4:
+                title: Kedd
+                operator: '='
+                value:
+                  value: '2'
+                  min: ''
+                  max: ''
+              5:
+                title: Szerda
+                operator: '='
+                value:
+                  value: '3'
+                  min: ''
+                  max: ''
+              6:
+                title: Csütörtök
+                operator: '='
+                value:
+                  value: '4'
+                  min: ''
+                  max: ''
+              7:
+                title: Péntek
+                operator: '='
+                value:
+                  value: '5'
+                  min: ''
+                  max: ''
+              8:
+                title: Szombat
+                operator: '='
+                value:
+                  value: '6'
+                  min: ''
+                  max: ''
+              9:
+                title: Vasárnap
+                operator: '='
+                value:
+                  value: '7'
+                  min: ''
+                  max: ''
+          plugin_id: numeric
+        field_hours_starthours:
+          id: field_hours_starthours
+          table: node__field_hours
+          field: field_hours_starthours
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_hours_starthours_op
+            label: 'Időpontok (field_hours:starthours)'
+            description: null
+            use_operator: false
+            operator: field_hours_starthours_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_hours_starthours
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: null
+            min_placeholder: null
+            max_placeholder: null
+          is_grouped: true
+          group_info:
+            label: Tól
+            description: ''
+            identifier: field_hours_starthours
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1:
+                title: '8:00 - '
+                operator: '>='
+                value:
+                  value: '800'
+                  min: ''
+                  max: ''
+              2:
+                title: '9:00 - '
+                operator: '>='
+                value:
+                  value: '900'
+                  min: ''
+                  max: ''
+              3:
+                title: '10:00 -'
+                operator: '>='
+                value:
+                  value: '1000'
+                  min: ''
+                  max: ''
+              4:
+                title: '11:00 -'
+                operator: '>='
+                value:
+                  value: '1100'
+                  min: ''
+                  max: ''
+              5:
+                title: '12:00 -'
+                operator: '>='
+                value:
+                  value: '1200'
+                  min: ''
+                  max: ''
+              6:
+                title: '13:00 -'
+                operator: '>='
+                value:
+                  value: '1300'
+                  min: ''
+                  max: ''
+              7:
+                title: '14:00 -'
+                operator: '>='
+                value:
+                  value: '1400'
+                  min: ''
+                  max: ''
+              8:
+                title: '15:00 -'
+                operator: '>='
+                value:
+                  value: '1500'
+                  min: ''
+                  max: ''
+              9:
+                title: '16:00 -'
+                operator: '>='
+                value:
+                  value: '1600'
+                  min: ''
+                  max: ''
+              10:
+                title: '17:00 -'
+                operator: '>='
+                value:
+                  value: '1700'
+                  min: ''
+                  max: ''
+              11:
+                title: '18:00 -'
+                operator: '>='
+                value:
+                  value: '1800'
+                  min: ''
+                  max: ''
+          plugin_id: numeric
+        field_hours_endhours:
+          id: field_hours_endhours
+          table: node__field_hours
+          field: field_hours_endhours
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_hours_endhours_op
+            label: 'Időpontok (field_hours:endhours)'
+            description: null
+            use_operator: false
+            operator: field_hours_endhours_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_hours_endhours
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            placeholder: null
+            min_placeholder: null
+            max_placeholder: null
+          is_grouped: true
+          group_info:
+            label: Ig
+            description: ''
+            identifier: field_hours_endhours
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items:
+              1:
+                title: '- 9:00'
+                operator: '<='
+                value:
+                  value: '900'
+                  min: ''
+                  max: ''
+              2:
+                title: '- 10:00'
+                operator: '<='
+                value:
+                  value: '1000'
+                  min: ''
+                  max: ''
+              3:
+                title: '- 11:00'
+                operator: '<='
+                value:
+                  value: '1100'
+                  min: ''
+                  max: ''
+              4:
+                title: '- 12:00'
+                operator: '<='
+                value:
+                  value: '1200'
+                  min: ''
+                  max: ''
+              5:
+                title: '- 13:00'
+                operator: '<='
+                value:
+                  value: '1300'
+                  min: ''
+                  max: ''
+              6:
+                title: '- 14:00'
+                operator: '<='
+                value:
+                  value: '1400'
+                  min: ''
+                  max: ''
+              7:
+                title: '- 15:00'
+                operator: '<='
+                value:
+                  value: '1500'
+                  min: ''
+                  max: ''
+              8:
+                title: '- 16:00'
+                operator: '<='
+                value:
+                  value: '1600'
+                  min: ''
+                  max: ''
+              9:
+                title: '- 17:00'
+                operator: '<='
+                value:
+                  value: '1700'
+                  min: ''
+                  max: ''
+              10:
+                title: '- 18:00'
+                operator: '<='
+                value:
+                  value: '1800'
+                  min: ''
+                  max: ''
+              11:
+                title: '- 19:00'
+                operator: '<='
+                value:
+                  value: '1900'
+                  min: ''
+                  max: ''
+              12:
+                title: '- 20:00'
+                operator: '<='
+                value:
+                  value: '2000'
+                  min: ''
+                  max: ''
+          plugin_id: numeric
       sorts:
         created:
           id: created
@@ -167,12 +577,20 @@ display:
       empty: {  }
       relationships: {  }
       arguments: {  }
+      display_extenders: {  }
+      use_ajax: true
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
+        - user
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
@@ -184,12 +602,15 @@ display:
     display_options:
       display_extenders: {  }
       path: treningek
+      exposed_block: true
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
+        - user
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }

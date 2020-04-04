@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 id: override_all_the_things
 label: 'Override ALL THE THINGS'
-code: "body {\r\n  \r\n}"
+code: ".field.field--name-body.field--type-text-with-summary.field--label-hidden.field--item {\r\n   /* float: right; */\r\n}\r\n\r\n.field.field--name-field-image.field--type-image.field--label-hidden.field--item { \r\n  float: right;\r\n  margin-top: -65px;\r\n}\r\n\r\n.page-node-type-training .field.field--name-field-image.field--type-image.field--label-hidden.field--item {\r\n  margin-top: -100px;\r\n}\r\n\r\n.field.field--name-field-hours.field--type-office-hours.field--label-above {\r\n  margin: 20px;\r\n}\r\n\r\n.field.field--name-field-video.field--type-video-embed-field.field--label-hidden.field--item {\r\n  margin: 20px;\r\n  margin-right: 40px;\r\n}\r\n\r\n.field.field--name-field-price.field--type-integer.field--label-inline {\r\n  margin: 20px;\r\n  margin-bottom: 5px;\r\n  margin-top: 5px;\r\n}\r\n\r\n.field.field--name-field-category.field--type-entity-reference.field--label-inline {\r\n  margin: 20px;\r\n  margin-bottom: 5px;\r\n  margin-top: 35px;\r\n}\r\n\r\n.layout__region.layout__region--second {\r\n  flex: 0 1 30%;\r\n}\r\n\r\n.layout__region.layout__region--first {\r\n  flex: 0 1 70%;\r\n}\r\n\r\n#superfish-main { \r\n  font-size: 1.5em;\r\n  text-transform: uppercase;\r\n}\r\n\r\n#superfish-main li.sf-depth-2 {\r\n  text-transform: none;\r\n}\r\n\r\n.navbar-header {\r\n  float: right;\r\n}\r\n\r\n.feed-icon {\r\n  display: none;\r\n}"
 media: all
 preprocess: true
 conditions: {  }
