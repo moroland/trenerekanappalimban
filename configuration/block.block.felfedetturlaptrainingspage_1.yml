@@ -1,0 +1,23 @@
+uuid: dae50f76-7125-4c54-a194-7a82ace44540
+langcode: hu
+status: true
+dependencies:
+  config:
+    - views.view.trainings
+  module:
+    - views
+  theme:
+    - bootstrap
+id: felfedetturlaptrainingspage_1
+theme: bootstrap
+region: content
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:trainings-page_1'
+settings:
+  id: 'views_exposed_filter_block:trainings-page_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: 'Tréningek keresése'
+visibility: {  }

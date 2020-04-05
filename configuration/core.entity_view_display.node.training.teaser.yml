@@ -13,6 +13,7 @@ dependencies:
     - node.type.training
   module:
     - ds
+    - office_hours
     - text
     - user
 third_party_settings:
@@ -30,6 +31,7 @@ third_party_settings:
       first:
         - field_price
         - body
+        - field_hours
       second:
         - field_trainer
       bottom:
@@ -57,6 +59,35 @@ content:
       trim_length: 600
     third_party_settings: {  }
     region: first
+  field_hours:
+    type: office_hours_table
+    weight: 3
+    region: first
+    label: above
+    settings:
+      show_closed: open
+      office_hours_first_day: '1'
+      day_format: long
+      time_format: G
+      grouped: '1'
+      closed_format: Closed
+      separator:
+        days: '<br />'
+        grouped_days: ' - '
+        day_hours: ': '
+        hours_hours: '-'
+        more_hours: ', '
+      current_status:
+        position: ''
+        open_text: 'Currently open!'
+        closed_text: 'Currently closed'
+      compress: 0
+      schema:
+        enabled: 0
+      timezone_field: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
   field_price:
     type: number_integer
     weight: 1
@@ -68,7 +99,7 @@ content:
     third_party_settings: {  }
   field_trainer:
     type: entity_reference_entity_view
-    weight: 3
+    weight: 4
     region: second
     label: hidden
     settings:
@@ -76,12 +107,11 @@ content:
       link: false
     third_party_settings: {  }
   links:
-    weight: 4
+    weight: 5
     region: bottom
     settings: {  }
     third_party_settings: {  }
 hidden:
   field_category: true
-  field_hours: true
   field_video: true
   langcode: true
